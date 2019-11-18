@@ -1,0 +1,77 @@
+<p-fieldset legend="Traco Health Report">
+    <div class="p-grid">
+        <div class="p-col-6">
+            <div class="box">
+              <span style="font-weight:bold"> Patient Name : </span>
+              <span>  Kumar Nitesh 1765511111 </span>
+
+            </div>
+        </div>
+        <div class="p-col-6">
+            <div class="box">
+            <span style="font-weight:bold"> Age/Gender  : </span>
+            <span>  29/Male </span>
+          </div>
+        </div>
+        <div class="p-col-6">
+            <div class="box">
+                <span style="font-weight:bold"> Sample Collected On : </span>
+                <span>  29/10/2017 </span>
+            </div>
+        </div>
+        <div class="p-col-6">
+            <div class="box">
+                <span style="font-weight:bold"> Sample Configured On : </span>
+                <span>  29/10/2017 </span>
+            </div>
+        </div>
+        <div class="p-col-6">
+            <div class="box">
+                <span style="font-weight:bold"> Sample Received On : </span>
+                <span>  29/10/2017 </span>
+            </div>
+        </div>
+        <div class="p-col-6">
+            <div class="box">
+                <span style="font-weight:bold"> Report Generated On : </span>
+                <span>  29/10/2017 </span>
+            </div>
+        </div>
+        <div class="p-col-6">
+            <div class="box">
+                <span style="font-weight:bold"> Doctor Name : </span>
+                <span>  Rahul Kumar </span>
+            </div>
+        </div>
+        <div class="p-col-6">
+            <div class="box">
+                <span style="font-weight:bold"> Report Generated On : </span>
+                <span>  29/10/2017 </span>
+            </div>
+        </div>
+    </div>
+</p-fieldset>
+
+<div style="padding-top:100px"></div>
+
+<p-treeTable [value]="files">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Test Name</th>
+            <th>Value</th>
+            <th>Unit</th>
+            <th>Bio Ref. Interval</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+        <tr>
+            <td>
+                <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+                {{rowData.name}}
+            </td>
+            <td>{{rowData.size}}</td>
+            <td>{{rowData.type}}</td>
+            <td>{{rowData.reference}}</td>
+        </tr>
+    </ng-template>
+</p-treeTable>
